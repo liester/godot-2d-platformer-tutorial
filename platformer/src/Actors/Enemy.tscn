@@ -23,6 +23,7 @@ position = Vector2( 0.5, -30 )
 shape = SubResource( 1 )
 
 [node name="VisibilityEnabler2D" type="VisibilityEnabler2D" parent="."]
+visible = false
 position = Vector2( 0, -48 )
 scale = Vector2( 5.65, 4.7 )
 process_parent = true
@@ -30,11 +31,11 @@ physics_process_parent = true
 
 [node name="StompDetector" type="Area2D" parent="."]
 modulate = Color( 0, 0.0823529, 0.964706, 1 )
-position = Vector2( 0, -66 )
+position = Vector2( 0, -59 )
 collision_layer = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StompDetector"]
-position = Vector2( 1, -5.75 )
+position = Vector2( 0, -13 )
 shape = SubResource( 2 )
 
 [connection signal="body_entered" from="StompDetector" to="." method="_on_StompDetector_body_entered"]
